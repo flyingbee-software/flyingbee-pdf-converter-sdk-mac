@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A737AEA2EDFE8B60010F696 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE6C441208F1BB300B93D94 /* Images.xcassets */; };
+		1A87B1CF2EDE6ECD007EA3F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A87B1CE2EDE6ECD007EA3F9 /* Cocoa.framework */; };
+		1A87B1D12EDE6ED4007EA3F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A87B1D02EDE6ED4007EA3F9 /* Foundation.framework */; };
+		1AC7B733304145DB00C5A7DC /* FPPDFFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC7B731304145CE00C5A7DC /* FPPDFFramework.framework */; };
+		1AC7B734304145DB00C5A7DC /* FPPDFFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC7B731304145CE00C5A7DC /* FPPDFFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AE6C44E208F1D0F00B93D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6C440208F1BB300B93D94 /* main.m */; };
+		1AE6C44F208F1D1A00B93D94 /* FPAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6C445208F1BB300B93D94 /* FPAppDelegate.mm */; };
+		1AE6C450208F1D1F00B93D94 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE6C444208F1BB300B93D94 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A87B1D52EDE6EE6007EA3F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AC7B734304145DB00C5A7DC /* FPPDFFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1A66F7D928AC9650008724A4 /* FPPDFFrameworkDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPPDFFrameworkDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A87B1CE2EDE6ECD007EA3F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1A87B1D02EDE6ED4007EA3F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AC7B731304145CE00C5A7DC /* FPPDFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FPPDFFramework.framework; path = FPPDFFrameworkDemoMac/FPPDFFramework.framework; sourceTree = "<group>"; };
+		1AE6C438208F1BB300B93D94 /* FPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPAppDelegate.h; sourceTree = "<group>"; };
+		1AE6C43B208F1BB300B93D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AE6C43F208F1BB300B93D94 /* FPPDFFrameworkDemoMac-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FPPDFFrameworkDemoMac-Prefix.pch"; sourceTree = "<group>"; };
+		1AE6C440208F1BB300B93D94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AE6C441208F1BB300B93D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1AE6C442208F1BB300B93D94 /* FPPDFFrameworkDemoMac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FPPDFFrameworkDemoMac-Info.plist"; sourceTree = "<group>"; };
+		1AE6C444208F1BB300B93D94 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		1AE6C445208F1BB300B93D94 /* FPAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FPAppDelegate.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A2AF7761994A71E009B43F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A87B1CF2EDE6ECD007EA3F9 /* Cocoa.framework in Frameworks */,
+				1A87B1D12EDE6ED4007EA3F9 /* Foundation.framework in Frameworks */,
+				1AC7B733304145DB00C5A7DC /* FPPDFFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A66F7D728AC9650008724A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A66F7D928AC9650008724A4 /* FPPDFFrameworkDemoMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AE6C437208F1BB300B93D94 /* FPPDFFrameworkDemoMac */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6C438208F1BB300B93D94 /* FPAppDelegate.h */,
+				1AE6C445208F1BB300B93D94 /* FPAppDelegate.mm */,
+				1AE6C444208F1BB300B93D94 /* MainMenu.xib */,
+				1AE6C439208F1BB300B93D94 /* Supporting Files */,
+			);
+			path = FPPDFFrameworkDemoMac;
+			sourceTree = "<group>";
+		};
+		1AE6C439208F1BB300B93D94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6C442208F1BB300B93D94 /* FPPDFFrameworkDemoMac-Info.plist */,
+				1AE6C43F208F1BB300B93D94 /* FPPDFFrameworkDemoMac-Prefix.pch */,
+				1AE6C441208F1BB300B93D94 /* Images.xcassets */,
+				1AE6C43A208F1BB300B93D94 /* InfoPlist.strings */,
+				1AE6C440208F1BB300B93D94 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6C437208F1BB300B93D94 /* FPPDFFrameworkDemoMac */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				1A66F7D728AC9650008724A4 /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7B731304145CE00C5A7DC /* FPPDFFramework.framework */,
+				1A87B1D02EDE6ED4007EA3F9 /* Foundation.framework */,
+				1A87B1CE2EDE6ECD007EA3F9 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A2AF7781994A71E009B43F2 /* FPPDFFrameworkDemoMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A2AF7A61994A71F009B43F2 /* Build configuration list for PBXNativeTarget "FPPDFFrameworkDemoMac" */;
+			buildPhases = (
+				1A2AF7751994A71E009B43F2 /* Sources */,
+				1A2AF7761994A71E009B43F2 /* Frameworks */,
+				1A2AF7771994A71E009B43F2 /* Resources */,
+				1A87B1D52EDE6EE6007EA3F9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FPPDFFrameworkDemoMac;
+			productName = PDF2WordMacDemo;
+			productReference = 1A66F7D928AC9650008724A4 /* FPPDFFrameworkDemoMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Flyingbee Software Co., Ltd.";
+				TargetAttributes = {
+					1A2AF7781994A71E009B43F2 = {
+						DevelopmentTeam = 3H8C8HR656;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FPPDFFrameworkDemoMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				fr,
+				ja,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			productRefGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A2AF7781994A71E009B43F2 /* FPPDFFrameworkDemoMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A2AF7771994A71E009B43F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AE6C450208F1D1F00B93D94 /* MainMenu.xib in Resources */,
+				1A737AEA2EDFE8B60010F696 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A2AF7751994A71E009B43F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AE6C44F208F1D1A00B93D94 /* FPAppDelegate.mm in Sources */,
+				1AE6C44E208F1D0F00B93D94 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AE6C43A208F1BB300B93D94 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AE6C43B208F1BB300B93D94 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A2AF7A71994A71F009B43F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 10.3.6;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 3H8C8HR656;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = YES;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FPPDFFrameworkDemoMac/Supporting Files/$(TARGET_NAME)-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "FPPDFFrameworkDemoMac/Supporting Files/FPPDFFrameworkDemoMac-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				MARKETING_VERSION = 10.3.6;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flyingbee.FPPDFConverterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1A2AF7A81994A71F009B43F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 10.3.6;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3H8C8HR656;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = YES;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FPPDFFrameworkDemoMac/Supporting Files/$(TARGET_NAME)-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "FPPDFFrameworkDemoMac/Supporting Files/FPPDFFrameworkDemoMac-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				MARKETING_VERSION = 10.3.6;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flyingbee.FPPDFConverterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../FPFoundation/FPFoundation,
+					../FPPDFFramework/FPPDFFramework,
+					../FPPDFParser/FPPDFCore/FPPDFOptions,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../FPFoundation/FPFoundation,
+					../FPPDFFramework/FPPDFFramework,
+					../FPPDFParser/FPPDFCore/FPPDFOptions,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A2AF7A61994A71F009B43F2 /* Build configuration list for PBXNativeTarget "FPPDFFrameworkDemoMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A2AF7A71994A71F009B43F2 /* Debug */,
+				1A2AF7A81994A71F009B43F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FPPDFFrameworkDemoMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
