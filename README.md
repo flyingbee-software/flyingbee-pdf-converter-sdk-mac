@@ -6,7 +6,7 @@ Flyingbee PDF Conversion SDK for Mac is a high-performance, developer-friendly l
 
 Experience the full power of our PDF conversion SDK Mac solution before integrating it into your project. Our web demo is always powered by the latest version of the Flyingbee SDK, allowing you to test PDF to MS Office (.docx, .xlsx, .pptx) conversion and OCR capabilities instantly.
 
-[🚀 Launch the Free Web Demo](https://www.flyingbee.com/pdf-converter/)
+[🚀 Launch the Free Web Demo](https://www.flyingbee.com/pdf-converter/?utm_source=github_readme_conversion_sdk_mac&utm_medium=referral&utm_campaign=github_readme_conversion_sdk_mac)
 
 ## Key Features of the Mac PDF Conversion Library
 
