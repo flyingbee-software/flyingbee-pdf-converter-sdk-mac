@@ -1,0 +1,79 @@
+name: Xcode Build and Analyze
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    name: Build and Analyze (macOS)
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks
+
+      - name: List available schemes
+        run: |
+          xcodebuild -list -project FPPDFFrameworkDemoMac.xcodeproj
+
+      - name: Build (Debug)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project FPPDFFrameworkDemoMac.xcodeproj \
+            -scheme FPPDFFrameworkDemoMac \
+            -configuration Debug \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY='' \
+            CODE_SIGN_ENTITLEMENTS='' \
+            | xcbeautify
+
+      - name: Analyze
+        run: |
+          set -o pipefail
+          xcodebuild analyze \
+            -project FPPDFFrameworkDemoMac.xcodeproj \
+            -scheme FPPDFFrameworkDemoMac \
+            -configuration Debug \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY='' \
+            CODE_SIGN_ENTITLEMENTS='' \
+            | xcbeautify
+          # Fail if the analyzer produced any reports
+          if find build/DerivedData/Build/Intermediates -name '*.xcactivitylog' -path '*Analyze*' | grep -q .; then
+            echo "Analyzer logs found (see build/DerivedData)."
+          fi
+
+      - name: Build (Release)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project FPPDFFrameworkDemoMac.xcodeproj \
+            -scheme FPPDFFrameworkDemoMac \
+            -configuration Release \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY='' \
+            CODE_SIGN_ENTITLEMENTS='' \
+            | xcbeautify
+
+      - name: Upload analyzer reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: analyzer-reports
+          path: build/DerivedData/Build/Intermediates/**/StaticAnalyzer/**
+          if-no-files-found: ignore
