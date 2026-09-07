@@ -35,12 +35,12 @@
 		1A66F7D928AC9650008724A4 /* FPPDFFrameworkDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPPDFFrameworkDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A87B1CE2EDE6ECD007EA3F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1A87B1D02EDE6ED4007EA3F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1AC7B731304145CE00C5A7DC /* FPPDFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FPPDFFramework.framework; path = FPPDFFrameworkDemoMac/FPPDFFramework.framework; sourceTree = "<group>"; };
+		1AC7B731304145CE00C5A7DC /* FPPDFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FPPDFFramework.framework; path = Shared/FPPDFFramework.framework; sourceTree = "<group>"; };
 		1AE6C438208F1BB300B93D94 /* FPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPAppDelegate.h; sourceTree = "<group>"; };
 		1AE6C43B208F1BB300B93D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AE6C43F208F1BB300B93D94 /* FPPDFFrameworkDemoMac-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FPPDFFrameworkDemoMac-Prefix.pch"; sourceTree = "<group>"; };
 		1AE6C440208F1BB300B93D94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1AE6C441208F1BB300B93D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1AE6C441208F1BB300B93D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ../../Shared/Images.xcassets; sourceTree = "<group>"; };
 		1AE6C442208F1BB300B93D94 /* FPPDFFrameworkDemoMac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FPPDFFrameworkDemoMac-Info.plist"; sourceTree = "<group>"; };
 		1AE6C444208F1BB300B93D94 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		1AE6C445208F1BB300B93D94 /* FPAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FPAppDelegate.mm; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac",
+					"$(PROJECT_DIR)/Shared",
 				);
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -310,7 +310,7 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac",
+					"$(PROJECT_DIR)/Shared",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

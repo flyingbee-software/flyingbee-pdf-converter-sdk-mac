@@ -165,12 +165,20 @@ void RevealFileInFinder(NSString *filePath) {
     tf_sourePath.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"sourePath"];
     tf_sourePassword.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"sourePassword"];
     
-    // Restore saved output format selection
+    // Restore saved output format selection (validate saved index)
     NSUInteger indexFormat = [[NSUserDefaults standardUserDefaults] integerForKey:@"outputFormat"];
+    if (indexFormat >= pub_outputformat.numberOfItems) {
+        indexFormat = 0;
+        [[NSUserDefaults standardUserDefaults] setInteger:indexFormat forKey:@"outputFormat"];
+    }
     [pub_outputformat selectItemAtIndex:indexFormat];
-    
-    // Restore saved settings tab index
+
+    // Restore saved settings tab index (validate saved index)
     NSUInteger indexSettings = [[NSUserDefaults standardUserDefaults] integerForKey:@"g_outputFormatsettings"];
+    if (indexSettings >= tbv_settings.numberOfTabViewItems) {
+        indexSettings = 0;
+        [[NSUserDefaults standardUserDefaults] setInteger:indexSettings forKey:@"g_outputFormatsettings"];
+    }
     [tbv_settings selectTabViewItemAtIndex:indexSettings];
     
     // Initialize path array from saved source path
@@ -185,8 +193,13 @@ void RevealFileInFinder(NSString *filePath) {
     }
     btn_openAfter.state = [[[NSUserDefaults standardUserDefaults] objectForKey:@"settings_openAfterConversion"] integerValue];
     
-    // Restore page range settings
-    sc_pageRange.selectedSegment = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_pageRangeSegment"];
+    // Restore page range settings (validate saved index to avoid NSRangeException)
+    NSInteger savedPageRangeSegment = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_pageRangeSegment"];
+    if (savedPageRangeSegment < 0 || savedPageRangeSegment >= (NSInteger)sc_pageRange.segmentCount) {
+        savedPageRangeSegment = 0; // Invalid value, fall back to the first segment
+        [[NSUserDefaults standardUserDefaults] setInteger:savedPageRangeSegment forKey:@"settings_pageRangeSegment"];
+    }
+    sc_pageRange.selectedSegment = savedPageRangeSegment;
     tf_pageRange.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"settings_pageRange"];
     if(sc_pageRange.selectedSegment == 4){
         tf_pageRange.enabled = YES;
@@ -194,8 +207,13 @@ void RevealFileInFinder(NSString *filePath) {
         tf_pageRange.enabled = NO;
     }
     
-    // Restore multi-thread settings
-    sc_multiThread.selectedSegment = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_multiThreadSegment"];
+    // Restore multi-thread settings (validate saved index to avoid NSRangeException)
+    NSInteger savedMultiThreadSegment = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_multiThreadSegment"];
+    if (savedMultiThreadSegment < 0 || savedMultiThreadSegment >= (NSInteger)sc_multiThread.segmentCount) {
+        savedMultiThreadSegment = 0; // Invalid value, fall back to the first segment
+        [[NSUserDefaults standardUserDefaults] setInteger:savedMultiThreadSegment forKey:@"settings_multiThreadSegment"];
+    }
+    sc_multiThread.selectedSegment = savedMultiThreadSegment;
     tf_multiThread.stringValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"settings_multiThread"];
     if(sc_multiThread.selectedSegment == 4){
         tf_multiThread.enabled = YES;
@@ -203,15 +221,25 @@ void RevealFileInFinder(NSString *filePath) {
         tf_multiThread.enabled = NO;
     }
     
-    // Restore HTML layout mode setting
+    // Restore HTML layout mode setting (validate saved index)
     NSUInteger html_layoutMode = [[NSUserDefaults standardUserDefaults] integerForKey:@"html_layoutMode"];
+    if (html_layoutMode >= html_pub_layoutMode.numberOfItems) {
+        html_layoutMode = 0;
+        [[NSUserDefaults standardUserDefaults] setInteger:html_layoutMode forKey:@"html_layoutMode"];
+    }
     [html_pub_layoutMode selectItemAtIndex:html_layoutMode];
     
     // Restore OCR settings
     ocr_btn_isEnableOCR.state = [[[NSUserDefaults standardUserDefaults] objectForKey:@"settings_ocr_isEnableOCR"] integerValue];
     ocr_btn_isEnableImageScan.state = [[[NSUserDefaults standardUserDefaults] objectForKey:@"settings_ocr_isEnableImageScan"] integerValue];
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"settings_ocr_imageDPI"]){
-        ocr_sc_imageDPI.selectedSegment = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_ocr_imageDPI"];
+        NSInteger savedOcrDPISegment = [[NSUserDefaults standardUserDefaults] integerForKey:@"settings_ocr_imageDPI"];
+        if (savedOcrDPISegment < 0 || savedOcrDPISegment >= (NSInteger)ocr_sc_imageDPI.segmentCount) {
+            // Invalid value (e.g. a legacy DPI value like 300 was stored instead of a segment index)
+            savedOcrDPISegment = 0;
+            [[NSUserDefaults standardUserDefaults] setInteger:savedOcrDPISegment forKey:@"settings_ocr_imageDPI"];
+        }
+        ocr_sc_imageDPI.selectedSegment = savedOcrDPISegment;
     }
     
     

@@ -42,9 +42,9 @@
 		7A00000400000000000000A1 /* FPPDFConverterBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FPPDFConverterBridge.mm; sourceTree = "<group>"; };
 		7A00001200000000000000A1 /* FPPDFConverterBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPDFConverterBridge.h; sourceTree = "<group>"; };
 		7A00001300000000000000A1 /* FPPDFFrameworkDemoMac_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPPDFFrameworkDemoMac_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		7A00000800000000000000A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7A00000800000000000000A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ../../Shared/Images.xcassets; sourceTree = "<group>"; };
 		7A00001400000000000000A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A00000A00000000000000A1 /* FPPDFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FPPDFFramework.framework; path = FPPDFFrameworkDemoMac_Swift/FPPDFFramework.framework; sourceTree = "<group>"; };
+		7A00000A00000000000000A1 /* FPPDFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FPPDFFramework.framework; path = Shared/FPPDFFramework.framework; sourceTree = "<group>"; };
 		7A00000D00000000000000A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7A00000F00000000000000A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -238,7 +238,7 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac_Swift",
+					"$(PROJECT_DIR)/Shared",
 				);
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -315,7 +315,7 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac_Swift",
+					"$(PROJECT_DIR)/Shared",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
