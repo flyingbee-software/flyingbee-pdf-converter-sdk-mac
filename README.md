@@ -116,3 +116,63 @@ In addition to PDF to DOCX, the SDK supports PDF to Excel (.xlsx), PDF to PowerP
 
 ### Is there a free trial available for the Mac PDF library?
 Yes, we offer a 30-day free trial license. Simply [contact our sales team](https://www.flyingbee.com/contact-us?utm_source=github_readme_conversion_sdk_mac&utm_medium=referral&utm_campaign=github_readme_conversion_sdk_mac) to request your evaluation license and begin integrating the SDK into your macOS application.
+
+## License
+
+This demo project is licensed under the [Apache License 2.0](LICENSE).
+
+## Acknowledgements
+
+This SDK uses the following open-source projects. We gratefully acknowledge their authors and contributors.
+
+- **Tesseract OCR** — Apache License 2.0
+  Copyright © 2006–2026 Google Inc. and contributors.
+
+- **Leptonica** — BSD 2-Clause License
+  Copyright © 2001–2026 Dan Bloomberg. All rights reserved.
+
+- **FreeType** — FreeType Project License (FTL)
+  Portions of this software are copyright © 2026 The FreeType Project (www.freetype.org). All rights reserved.
+
+- **zlib** — zlib License
+  Copyright © 1995–2026 Jean-loup Gailly and Mark Adler.
+
+- **AGG (Anti-Grain Geometry)** — MPL 1.1 / BSD-2-Clause License
+  Copyright © 2002–2006 Maxim Shemanarev.
+
+- **libpng** — zlib License
+  Copyright © 1998–2026 Glenn Randers-Pehrson and contributors.
+
+- **libjpeg-turbo** — BSD License + IJG License
+  Copyright © 2009–2026 D. R. Commander and contributors.
+
+- **stb_image** — Public Domain / MIT License
+  By Sean Barrett and contributors.
+
+- **mujs** — ISC License
+  Copyright © 2013–2026 Artifex Software, Inc.
+
+- **expat** — MIT License
+  Copyright © 1998, 1999, 2000 Thai Open Source Software Center Ltd and Clark Cooper.
+  Copyright © 2001–2026 Expat maintainers.
+
+- **b64** — MIT License
+  Copyright © 2004–2008 René Nyffenegger and contributors.
+
+- **OpenJPEG** — BSD 2-Clause License
+  Copyright © 2002–2026 Universite catholique de Louvain (UCL), Belgium and contributors.
+
+- **fontconfig** — MIT License
+  Copyright © 2001, 2003 Keith Packard.
+
+- **uchardet** — MPL 1.1 / GPL 2.0+ / LGPL 2.1+ (used under MPL 1.1)
+  Copyright © 2009–2026 Mozilla Foundation and contributors.
+
+- **utf8rewind** — MIT License
+  Copyright © 2015–2026 Quinten Lansu. All rights reserved.
+
+- **PDFium** — BSD 3-Clause / Apache License 2.0
+  Copyright © 2014 The PDFium Authors.
+
+> Copyright 2026 Flyingbee Software, Inc. All rights reserved.
+```

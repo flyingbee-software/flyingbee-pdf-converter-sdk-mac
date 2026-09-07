@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A00000100000000000000A1 /* FPPDFFrameworkDemoMac_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000200000000000000A1 /* FPPDFFrameworkDemoMac_SwiftApp.swift */; };
+		7A00002700000000000000A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00002800000000000000A1 /* ContentView.swift */; };
+		7A00002900000000000000A1 /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00002A00000000000000A1 /* SettingsViews.swift */; };
+		7A00002B00000000000000A1 /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00002C00000000000000A1 /* ConverterViewModel.swift */; };
+		7A00000300000000000000A1 /* FPPDFConverterBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A00000400000000000000A1 /* FPPDFConverterBridge.mm */; };
+		7A00000700000000000000A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A00000800000000000000A1 /* Images.xcassets */; };
+		7A00000900000000000000A1 /* FPPDFFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A00000A00000000000000A1 /* FPPDFFramework.framework */; };
+		7A00000B00000000000000A1 /* FPPDFFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A00000A00000000000000A1 /* FPPDFFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A00000C00000000000000A1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A00000D00000000000000A1 /* Cocoa.framework */; };
+		7A00000E00000000000000A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A00000F00000000000000A1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A00001000000000000000A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7A00000B00000000000000A1 /* FPPDFFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A00001100000000000000A1 /* FPPDFFrameworkDemoMac_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPPDFFrameworkDemoMac_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A00000200000000000000A1 /* FPPDFFrameworkDemoMac_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPDFFrameworkDemoMac_SwiftApp.swift; sourceTree = "<group>"; };
+		7A00002800000000000000A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A00002A00000000000000A1 /* SettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
+		7A00002C00000000000000A1 /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
+		7A00000400000000000000A1 /* FPPDFConverterBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FPPDFConverterBridge.mm; sourceTree = "<group>"; };
+		7A00001200000000000000A1 /* FPPDFConverterBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPPDFConverterBridge.h; sourceTree = "<group>"; };
+		7A00001300000000000000A1 /* FPPDFFrameworkDemoMac_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPPDFFrameworkDemoMac_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A00000800000000000000A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7A00001400000000000000A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A00000A00000000000000A1 /* FPPDFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FPPDFFramework.framework; path = FPPDFFrameworkDemoMac_Swift/FPPDFFramework.framework; sourceTree = "<group>"; };
+		7A00000D00000000000000A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7A00000F00000000000000A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A00001500000000000000A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A00000C00000000000000A1 /* Cocoa.framework in Frameworks */,
+				7A00000E00000000000000A1 /* Foundation.framework in Frameworks */,
+				7A00000900000000000000A1 /* FPPDFFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A00001600000000000000A1 = {
+			isa = PBXGroup;
+			children = (
+				7A00001700000000000000A1 /* FPPDFFrameworkDemoMac_Swift */,
+				7A00001800000000000000A1 /* Frameworks */,
+				7A00001900000000000000A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A00001700000000000000A1 /* FPPDFFrameworkDemoMac_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				7A00000200000000000000A1 /* FPPDFFrameworkDemoMac_SwiftApp.swift */,
+				7A00002800000000000000A1 /* ContentView.swift */,
+				7A00002A00000000000000A1 /* SettingsViews.swift */,
+				7A00002C00000000000000A1 /* ConverterViewModel.swift */,
+				7A00001200000000000000A1 /* FPPDFConverterBridge.h */,
+				7A00000400000000000000A1 /* FPPDFConverterBridge.mm */,
+				7A00001300000000000000A1 /* FPPDFFrameworkDemoMac_Swift-Bridging-Header.h */,
+				7A00000A00000000000000A1 /* FPPDFFramework.framework */,
+				7A00001A00000000000000A1 /* Supporting Files */,
+			);
+			path = FPPDFFrameworkDemoMac_Swift;
+			sourceTree = "<group>";
+		};
+		7A00001A00000000000000A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A00001400000000000000A1 /* Info.plist */,
+				7A00000800000000000000A1 /* Images.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A00001800000000000000A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A00000A00000000000000A1 /* FPPDFFramework.framework */,
+				7A00000F00000000000000A1 /* Foundation.framework */,
+				7A00000D00000000000000A1 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A00001900000000000000A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A00001100000000000000A1 /* FPPDFFrameworkDemoMac_Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A00001B00000000000000A1 /* FPPDFFrameworkDemoMac_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A00001C00000000000000A1 /* Build configuration list for PBXNativeTarget "FPPDFFrameworkDemoMac_Swift" */;
+			buildPhases = (
+				7A00001D00000000000000A1 /* Sources */,
+				7A00001500000000000000A1 /* Frameworks */,
+				7A00001E00000000000000A1 /* Resources */,
+				7A00001000000000000000A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FPPDFFrameworkDemoMac_Swift;
+			productName = FPPDFFrameworkDemoMac_Swift;
+			productReference = 7A00001100000000000000A1 /* FPPDFFrameworkDemoMac_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A00001F00000000000000A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				ORGANIZATIONNAME = "Flyingbee Software Co., Ltd.";
+				TargetAttributes = {
+					7A00001B00000000000000A1 = {
+						CreatedOnToolsVersion = 15.4;
+						DevelopmentTeam = 3H8C8HR656;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7A00002000000000000000A1 /* Build configuration list for PBXProject "FPPDFFrameworkDemoMac_Swift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A00001600000000000000A1;
+			productRefGroup = 7A00001900000000000000A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A00001B00000000000000A1 /* FPPDFFrameworkDemoMac_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A00001E00000000000000A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A00000700000000000000A1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A00001D00000000000000A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A00000100000000000000A1 /* FPPDFFrameworkDemoMac_SwiftApp.swift in Sources */,
+				7A00002700000000000000A1 /* ContentView.swift in Sources */,
+				7A00002900000000000000A1 /* SettingsViews.swift in Sources */,
+				7A00002B00000000000000A1 /* ConverterViewModel.swift in Sources */,
+				7A00000300000000000000A1 /* FPPDFConverterBridge.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7A00002100000000000000A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 10.3.6;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 3H8C8HR656;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = YES;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac_Swift",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "FPPDFFrameworkDemoMac_Swift/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 10.3.6;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flyingbee.FPPDFConverterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "FPPDFFrameworkDemoMac_Swift/FPPDFFrameworkDemoMac_Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7A00002200000000000000A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 10.3.6;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3H8C8HR656;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = YES;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FPPDFFrameworkDemoMac_Swift",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "FPPDFFrameworkDemoMac_Swift/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 10.3.6;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flyingbee.FPPDFConverterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "FPPDFFrameworkDemoMac_Swift/FPPDFFrameworkDemoMac_Swift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7A00002300000000000000A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7A00002400000000000000A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A00001C00000000000000A1 /* Build configuration list for PBXNativeTarget "FPPDFFrameworkDemoMac_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A00002100000000000000A1 /* Debug */,
+				7A00002200000000000000A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A00002000000000000000A1 /* Build configuration list for PBXProject "FPPDFFrameworkDemoMac_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A00002300000000000000A1 /* Debug */,
+				7A00002400000000000000A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A00001F00000000000000A1 /* Project object */;
+}
