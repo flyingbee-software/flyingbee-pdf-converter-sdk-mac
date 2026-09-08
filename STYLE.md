@@ -71,6 +71,91 @@ and IDE integrations. They are **per-machine, per-session state** and must
 4. Customer-facing `README.md` does not mention any of these tools or paths;
    they are purely maintainer-side concerns.
 
+### AI assistant onboarding
+
+When the maintainer adopts a new AI coding assistant (or restarts an existing
+one on a new machine), the assistant must do this **before** answering any
+question or proposing any change:
+
+1. Read this `STYLE.md` (the canonical rules).
+2. Read `specs/000-master-mac.spec.md` (the master spec — what the project
+   is, what the two mac demos do, what is in scope and out).
+3. If a task is in flight, also read the relevant spec:
+   - SwiftUI demo work in progress → `specs/001-mac-swiftui-full.spec.md`
+   - Acceptance / customer docs → `specs/002-mac-acceptance.spec.md`
+4. For continuity, scan the most recent daily log under
+   `.workbuddy/memory/YYYY-MM-DD.md` and the long-term project memory at
+   `.workbuddy/memory/MEMORY.md` (these may be from a previous AI client;
+   treat as advisory, not authoritative).
+5. Read `AGENTS.md` (gitignored, per-machine) if it exists; it carries any
+   additional, client-specific instructions.
+
+**Hard rules the assistant must obey:**
+
+- **Language**: anything that ends up in git is **English**. Local AI
+  conversation with the maintainer may be Chinese (or any language the user
+  prefers). Customer-facing `README.md` is English. Do not leak internal
+  Chinese into `README.md` or any committed file.
+- **Never commit** any AI assistant state file (see the enumeration above).
+- **Specs are gitignored internal Chinese**: `specs/*.spec.md` is the
+  internal SDD protocol. Do not propose committing it.
+- **The repo is mac-only as of 2026-09-08**: the iOS demo targets were
+  migrated out. If the user asks about iOS, point them to the separate
+  archive (not in this repo).
+- **Two mac demos coexist**:
+  - `FPPDFFrameworkDemoMac` (Obj-C + XIB) — **frozen baseline**, do not
+    change.
+  - `FPPDFFrameworkDemoMac_Swift` (SwiftUI) — **active mainline**, the
+    spec target.
+
+**When the assistant does not know something:**
+
+- **Ask.** Do not invent bundle ids, file paths, framework versions,
+  license details, or simulator UDIDs. If the answer is in a spec, cite
+  the spec.
+- If the user switches to a new task mid-conversation, re-read the
+  relevant spec before responding.
+- For destructive filesystem actions, follow the "warn + list + confirm"
+  pattern. Default to read-only scans unless the user explicitly authorizes
+  a change.
+
+### `AGENTS.md` template (recreate on a new machine)
+
+`AGENTS.md` is gitignored and is the local entry point for any AI assistant.
+The canonical version lives in this repo; on a new machine or with a new
+client, recreate it at the repo root with the following content (English,
+free of internal Chinese, mirror of this onboarding section):
+
+```markdown
+# AGENTS.md — AI Assistant Entry Point (local, per-machine)
+
+> Recreate this file from `STYLE.md` Rule 0 → "AI assistant onboarding" on
+> every new machine. The canonical version lives in git via `STYLE.md`.
+
+## Mandatory first reads (before any action)
+
+1. `STYLE.md` — canonical rules
+2. `specs/000-master-mac.spec.md` — master spec
+3. The in-flight spec, if any (`001-…` or `002-…`)
+4. `.workbuddy/memory/MEMORY.md` — long-term project memory (advisory)
+5. `.workbuddy/memory/YYYY-MM-DD.md` — most recent daily log (advisory)
+
+## Hard rules
+
+- Anything in git = English. Local conversation = maintainer's choice.
+- Never commit any AI assistant state file (see `STYLE.md` for the list).
+- `specs/*.spec.md` is internal Chinese SDD; never propose committing it.
+- The repo is mac-only (iOS migrated out 2026-09-08).
+- `FPPDFFrameworkDemoMac` (Obj-C) is a frozen baseline; do not change.
+- `FPPDFFrameworkDemoMac_Swift` (SwiftUI) is the active mainline.
+
+## When in doubt
+
+- Ask. Cite the relevant spec when the answer is in one.
+- Default to read-only scans; confirm before any destructive action.
+```
+
+
 ### Enforcement
 
 The maintainer audits pre-commit / pre-PR manually. Future improvement (not required today):

@@ -81,6 +81,11 @@ specs/
 # WorkBuddy (per-project) — already covered above as `.workbuddy/`.
 # WorkBuddy (global bootstrap lives outside the repo, but `AGENTS.md`-
 # style files at the repo root are still local-only).
+#
+# Note: `AGENTS.md` is the local AI assistant entry point. It is intentionally
+# gitignored (per-client / per-machine customization). The canonical template
+# lives in `STYLE.md` Rule 0 → "AI assistant onboarding" → "`AGENTS.md`
+# template". On a new machine, recreate it from that template.
 AGENTS.md
 CLAUDE.md
 # Claude Code
