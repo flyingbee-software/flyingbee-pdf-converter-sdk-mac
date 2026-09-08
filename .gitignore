@@ -45,3 +45,85 @@ fastlane/test_output
 
 # Xcode build products (CI uses -derivedDataPath build/DerivedData)
 build/
+
+# Custom derivedDataPath dirs created during local sandbox-bypass builds.
+# Mirrors the pattern `xcodebuild -derivedDataPath "$PWD/<name>" build` uses
+# in the harness scripts. Covers macOS and iOS sim builds, with headroom for
+# future variants. (iOS demos were migrated out on 2026-09-08; the
+# `build-ios-*` patterns are kept as a no-op safety net in case they return.)
+build-*/
+build-*-dd/
+
+# Specs — internal SDD docs only. None of this is shipped to customers.
+# The repo's `.md` files in `specs/` (S0/S1/S1b/S2 plus `README.md`) are
+# written in Chinese as the internal AI-assistant collaboration protocol
+# (Spec-Driven Development). Customers should never see them. The whole
+# directory is ignored; rebuild from the conversation on a new machine.
+#
+# Sub-paths covered:
+#   - specs/*.spec.md, specs/README.md   (SDD markdown, all Chinese)
+#   - specs/evidence/**/*.png            (13+ MB per spec; regenerable)
+#   - specs/.DS_Store, **/.DS_Store      (macOS Finder cruft)
+specs/
+
+# WorkBuddy session memory. Files in here (`.workbuddy/memory/YYYY-MM-DD.md`
+# daily logs + `MEMORY.md`) are WorkBuddy-managed state, not project source.
+# 184 KB total today, but the contents are local to this machine's
+# WorkBuddy session — regenerate from the conversation when needed.
+.workbuddy/
+
+## AI assistant state (per-machine, never in git)
+# Mirrors the enumeration in `STYLE.md` → Rule 0 → "AI assistant state files".
+# Any state produced by an AI coding tool is local-only; do not commit it.
+# When a new tool is adopted, add its state path here in the same PR that
+# documents it in STYLE.md.
+#
+# WorkBuddy (per-project) — already covered above as `.workbuddy/`.
+# WorkBuddy (global bootstrap lives outside the repo, but `AGENTS.md`-
+# style files at the repo root are still local-only).
+AGENTS.md
+CLAUDE.md
+# Claude Code
+.claude/
+.claude.json
+# Cursor
+.cursor/
+.cursorrules
+# Aider
+.aider*
+.aider.chat.history*
+aider*
+# Continue
+.continue/
+.continuerules
+# GitHub Copilot
+.github/copilot-instructions.md
+.github/copilot/
+# Cody (Sourcegraph)
+.cody/
+.cody.json
+# Windsurf
+.windsurf/
+.windsurfrules
+# Cline
+.clinerules/
+.cline/
+# Roo Code
+.roo/
+# Gemini CLI
+GEMINI.md
+.gemini/
+# Codeium
+.codeium/
+.codeiumignore
+# Tabnine
+.tabnine/
+.tabnine_root/
+# Zed AI
+.rules
+
+
+# macOS Finder noise (Dropbox-style copy hooks, Sidecar staging, etc.).
+.DS_Store
+.AppleDouble
+.LSOverride
